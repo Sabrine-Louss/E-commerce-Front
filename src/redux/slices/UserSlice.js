@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const RegisterUser = createAsyncThunk("Register", async (data,{rejectWithValue}) => {
  try{
- const res = await axios.post("http://localhost:5000/api/user/register", data);
+ const res = await axios.post("/user/register", data);
   return res.data;
  }
  catch(error){
@@ -13,7 +13,7 @@ export const RegisterUser = createAsyncThunk("Register", async (data,{rejectWith
 
 export const LoginUser = createAsyncThunk("Login", async (data,{rejectWithValue}) => {
   try{
-  const res = await axios.post("http://localhost:5000/api/user/login", data);
+  const res = await axios.post("/user/login", data);
    return res.data;
   }
   catch(error){
